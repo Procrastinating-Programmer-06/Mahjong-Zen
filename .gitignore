@@ -1,0 +1,49 @@
+# === GAME SPECIFIC ===
+# Ignore local save files and auto-generated game data
+mahjong_save.json
+.mahjong_zen_save.json
+logs/
+*.log
+
+# === BUILD & BINARIES ===
+target/
+bin/
+out/
+build/
+*.jar
+*.war
+*.ear
+# Keep the wrapper but ignore other binaries
+!.mvn/wrapper/maven-wrapper.jar
+
+# === IntelliJ IDEA ===
+.idea/
+*.iml
+*.iws
+*.ipr
+# If you want to share project-wide settings, you could uncomment these:
+# !.idea/runConfigurations/
+# !.idea/vcs.xml
+
+# === Eclipse ===
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+# === VS Code ===
+.vscode/
+
+# === OS SPECIFIC ===
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# === VERSION CONTROL (Safety) ===
+.git/
+.svn/

@@ -1,0 +1,64 @@
+/* --- THE POPUP LIST AREA --- */
+.combo-box-popup > .list-view {
+    -fx-background-color: #181825;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #45475a;
+    -fx-border-width: 1;
+    -fx-padding: 6;
+
+    /* 1. THE NUCLEAR OPTION: These variables control the 'Blue' at the system level */
+    -fx-selection-bar: #f1d592 !important;
+    -fx-selection-bar-non-focused: #f1d592 !important;
+    -fx-cell-hover-color: transparent !important; /* Forces hover to have no color */
+}
+
+/* --- THE CELLS INSIDE THE POPUP --- */
+
+/* 2. COMPLETELY DISABLE HOVER: Removes the blue/grey 'glow' as you move the mouse */
+.combo-box-popup > .list-view > .list-cell:hover {
+    -fx-background-color: transparent !important;
+    -fx-background: transparent !important;
+    -fx-text-fill: #cdd6f4 !important; /* Keeps text visible when moving mouse */
+}
+
+/* 3. TARGET ONLY THE SELECTION: This gives you the solid gold block */
+.combo-box-popup > .list-view > .list-cell:filled:selected {
+    -fx-background-color: #f1d592 !important;
+    -fx-text-fill: #181825 !important; /* Dark text for the gold background */
+    -fx-font-weight: bold;
+}
+
+/* 4. SELECTION STICKINESS: Ensures it stays gold even if the mouse is over it */
+.combo-box-popup > .list-view > .list-cell:filled:selected:hover {
+    -fx-background-color: #f1d592 !important;
+    -fx-text-fill: #181825 !important;
+}
+
+/* 5. THE CLOSED BOX: The text shown when the menu is not open */
+.combo-box > .list-cell:filled {
+    -fx-text-fill: #f1d592 !important;
+}
+/* Styling the ProgressIndicator to be Pale Gold */
+.progress-indicator {
+    -fx-progress-color: #f1d592;
+}
+
+.progress-indicator .indicator {
+    -fx-background-color: transparent, #f1d592;
+}
+
+.progress-indicator .progress {
+    -fx-background-color: #f1d592;
+}
+
+/* Make the overlay dark and blurry */
+#loadingOverlay {
+    -fx-background-color: rgba(17, 17, 27, 0.8); /* Dark navy/black with transparency */
+    -fx-background-radius: 10;
+}
+/* Add this to your style.css */
+.root {
+    -jpro-zoom: fit; /* Options: fit, width, height, or a number like 1.2 */
+    -fx-background-color: #1e1e2e;
+}
