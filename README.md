@@ -25,7 +25,7 @@ Developing this game involved solving a few interesting problems:
 * `pom.xml`: The Maven file that manages libraries like JavaFX and Gson.
 
 ### How to Run
-1. Ensure you have **Java 17** or higher installed.
+1. Ensure you have **Java 23** or higher installed.
 2. Download the `MahjongZen.jar` from the **Releases** tab on this repository.
 3. Run it using your terminal:
    ```bash
