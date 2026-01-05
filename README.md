@@ -30,3 +30,10 @@ Developing this game involved solving a few interesting problems:
 3. Run it using your terminal:
    ```bash
    java -jar MahjongZen.jar
+
+### Credits & Attributions
+
+This project uses assets from the following sources:
+
+* **Mahjong Tile Images:** [riichi-mahjong-tiles (Black Variant)](https://github.com/FluffyStuff/riichi-mahjong-tiles) by [@FluffyStuff](https://github.com/FluffyStuff)
+* **App Icon:** [Mahjong Icon Pack](https://www.flaticon.com/free-icons/mahjong) by [Freepik](https://www.flaticon.com/authors/freepik) via Flaticon.
