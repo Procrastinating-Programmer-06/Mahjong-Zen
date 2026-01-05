@@ -1,0 +1,40 @@
+name: Build Windows EXE
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 23
+      uses: actions/setup-java@v4
+      with:
+        java-version: '23'
+        distribution: 'oracle'
+        cache: maven
+
+    - name: Build with Maven
+      run: mvn clean package
+
+    - name: Build EXE with jpackage
+      run: |
+        jpackage --input target/ `
+                 --name MahjongZen `
+                 --main-jar MahjongZen.jar `
+                 --main-class com.mahjong_java.mahjong_java.Launcher `
+                 --type exe `
+                 --win-shortcut `
+                 --win-menu `
+                 --java-options "--add-exports java.base/sun.misc=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens javafx.graphics/com.sun.prism.impl=ALL-UNNAMED"
+
+    - name: Upload Windows Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: MahjongZen-Windows-Installer
+        path: MahjongZen-*.exe
